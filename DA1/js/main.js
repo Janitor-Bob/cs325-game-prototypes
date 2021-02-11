@@ -31,9 +31,9 @@ class MyScene extends Phaser.Scene {
 		this.load.image('greenSwitchOpen', 'assets/greenSwitchOpen.png');
 	    	this.load.image('winnerimage', 'assets/winnerimage.png');
 		this.load.spritesheet('dude', 'assets/dude.png', 
-		{frameWidth: 21, frameHeight: 21});
+		{frameWidth: 21, frameHeight: 21, spacing: 2});
 		this.load.spritesheet('flag', 'assets/flag.png',
-		{frameWidth: 21, frameHeight: 21, spacing: 2})
+		{frameWidth: 21, frameHeight: 21, spacing: 1})
 		this.load.audio('lever', 'assets/lever.wav')
 		this.load.audio('music', 'assets/music.wav')
 		this.load.audio('win', 'assets/win.wav')

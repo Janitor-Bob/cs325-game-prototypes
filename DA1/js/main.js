@@ -85,7 +85,7 @@ class MyScene extends Phaser.Scene {
 		
 		this.cursors = this.input.keyboard.createCursorKeys();
 
-		this.sound.add('music', {loop: true, volume: 0.05}).play();
+		this.sound.add('music', {loop: true, volume: 0.3}).play();
     }
     
     update() {
@@ -174,7 +174,7 @@ function pressGreenSwitch(player, greenSwitch) {
 	this.physics.add.overlap(this.player, this.end, victory, null, this);
 }
 function victory() {
-	this.sound.add('win', {loop: false, volume: 0.05}).play();
+	this.sound.add('win', {loop: false, volume: 0.03}).play();
 	this.physics.add.sprite(400,300,'winnerimage');
 }
 const game = new Phaser.Game({

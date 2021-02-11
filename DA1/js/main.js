@@ -29,6 +29,7 @@ class MyScene extends Phaser.Scene {
 		this.load.image('yellowSwitchOpen', 'assets/yellowSwitchOpen.png');
 		this.load.image('greenSwitch', 'assets/greenSwitch.png');
 		this.load.image('greenSwitchOpen', 'assets/greenSwitchOpen.png');
+	    	this.load.image('winnerimage', 'assets/winnerimage.png');
 		this.load.spritesheet('dude', 'assets/dude.png', 
 		{frameWidth: 21, frameHeight: 21});
 		this.load.spritesheet('flag', 'assets/flag.png',
@@ -174,9 +175,7 @@ function pressGreenSwitch(player, greenSwitch) {
 }
 function victory() {
 	this.sound.add('win', {loop: false, volume: 0.05}).play();
-	let style = {font: "25px Verdana", fill: "#99FF99", align: "center"};
-    let text = this.add.text(this.cameras.main.centerX, 100, "You Win!", style);
-    text.setOrigin(0.5, 0.0);
+	this.physics.add.sprite(400,300,'winnerimage');
 }
 const game = new Phaser.Game({
     type: Phaser.AUTO,
